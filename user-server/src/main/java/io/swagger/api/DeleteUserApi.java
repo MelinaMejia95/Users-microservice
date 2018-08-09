@@ -34,6 +34,6 @@ public interface DeleteUserApi {
     @RequestMapping(value = "/deleteUser/{id}",
         produces = { "application/json" }, 
         method = RequestMethod.DELETE)
-    ResponseEntity<JsonApiBodyRequest> deleteUserIdDelete(@ApiParam(value = "User Id",required=true) @PathVariable("id") String id);
+    ResponseEntity<?> deleteUserIdDelete(@ApiParam(value = "User Id",required=true) @PathVariable("id") String id);
 
 }

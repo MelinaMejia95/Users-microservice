@@ -36,6 +36,9 @@ public class RegUser   {
 
   @JsonProperty("type")
   private String type = null;
+  
+  @JsonProperty("type")
+  private String token = null;
 
   public RegUser id(String id) {
     this.id = id;
