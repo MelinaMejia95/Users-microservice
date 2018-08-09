@@ -36,6 +36,6 @@ public interface UpdateUserApi {
         produces = { "application/json" }, 
         consumes = { "application/json" },
         method = RequestMethod.PUT)
-    ResponseEntity<JsonApiBodyResponseSuccess> updateUserPut(@ApiParam(value = "" ,required=true )  @Valid @RequestBody JsonApiBodyRequest body);
+    ResponseEntity<?> updateUserPut(@ApiParam(value = "" ,required=true )  @Valid @RequestBody JsonApiBodyRequest body);
 
 }
