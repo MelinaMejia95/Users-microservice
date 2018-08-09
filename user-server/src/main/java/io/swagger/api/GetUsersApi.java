@@ -44,6 +44,6 @@ public interface GetUsersApi {
     @RequestMapping(value = "/getUsers/{id}",
         produces = { "application/json" }, 
         method = RequestMethod.GET)
-    ResponseEntity<JsonApiBodyRequest> getUsersIdGet(@ApiParam(value = "User id",required=true) @PathVariable("id") String id);
+    ResponseEntity<?> getUsersIdGet(@ApiParam(value = "User id",required=true) @PathVariable("id") String id);
 
 }
