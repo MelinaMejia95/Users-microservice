@@ -1,0 +1,9 @@
+springfox.documentation.swagger.v2.path: /api-docs
+server.contextPath: /Users
+server.port: 8094
+
+amazon.dynamodb.endpoint: http://localhost:8080
+amazon.aws.accesskey: a
+amazon.aws.secretkey: as
+amazon.s3.endpoint: https://s3.us-east-2.amazonaws.com
+amazon.s3.bucketname: acnproductbucket
