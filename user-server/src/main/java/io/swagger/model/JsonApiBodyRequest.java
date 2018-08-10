@@ -1,37 +1,53 @@
 package io.swagger.model;
 
-import java.util.Objects;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import io.swagger.model.RegUser;
-import java.util.ArrayList;
 import java.util.List;
-import org.springframework.validation.annotation.Validated;
+import java.util.Objects;
+
 import javax.validation.Valid;
-import javax.validation.constraints.*;
+import javax.validation.constraints.NotNull;
+
+import io.swagger.annotations.ApiModelProperty;
 
 /**
  * JsonApiBodyRequest
  */
-@Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-08-09T02:06:01.913Z")
 
 public class JsonApiBodyRequest   {
-  @JsonProperty("users")
-  @Valid
+  
+  private String email;
+  private String password;
   private List<RegUser> users;
 
+  public JsonApiBodyRequest login(String email, String password) {
+	    this.email = email;
+	    this.password = password;
+	    return this;
+  }
+  
+  public JsonApiBodyRequest logout(String email) {
+	    this.email = email;
+	    return this;
+}
+  
   public JsonApiBodyRequest users(List<RegUser> users) {
     this.users = users;
     return this;
   }
 
-  public JsonApiBodyRequest addUsersItem(RegUser usersItem) {
+  public String getEmail() {
+	return email;
+}
+
+public void setEmail(String email) {
+	this.email = email;
+}
+
+public JsonApiBodyRequest addUsersItem(RegUser usersItem) {
     this.users.add(usersItem);
     return this;
   }
+  
+
 
   /**
    * Get users
@@ -51,7 +67,15 @@ public class JsonApiBodyRequest   {
   }
 
 
-  @Override
+  public String getPassword() {
+	return password;
+}
+
+public void setPassword(String password) {
+	this.password = password;
+}
+
+@Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;

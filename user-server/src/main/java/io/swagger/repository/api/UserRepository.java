@@ -11,5 +11,6 @@ import io.swagger.model.RegUser;;
 public interface UserRepository extends CrudRepository<RegUser, String>{
 	
 	public List<RegUser> findByType(String type);
+	public List<RegUser> findByEmail(String email);
 
 }

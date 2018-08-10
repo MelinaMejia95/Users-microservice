@@ -1,6 +1,6 @@
 springfox.documentation.swagger.v2.path: /api-docs
 server.contextPath: /Users
-server.port: 8094
+server.port: 8095
 
 amazon.dynamodb.endpoint: http://localhost:8080
 amazon.aws.accesskey: a

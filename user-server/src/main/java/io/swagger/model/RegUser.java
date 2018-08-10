@@ -37,7 +37,10 @@ public class RegUser   {
   @JsonProperty("type")
   private String type = null;
   
-  @JsonProperty("type")
+  @JsonProperty("password")
+  private String password = null;
+  
+  @JsonProperty("token")
   private String token = null;
 
   public RegUser id(String id) {
@@ -165,6 +168,38 @@ public class RegUser   {
   public void setType(String type) {
     this.type = type;
   }
+  
+  /**
+   * Get password
+   * @return password
+  **/
+  @ApiModelProperty(required = true, value = "")
+  @NotNull
+
+
+  public String getPassword() {
+    return password;
+  }
+
+  public void setPassword(String password) {
+    this.password = password;
+  }
+  
+  /**
+   * Get token
+   * @return token
+  **/
+  @ApiModelProperty(required = false, value = "")
+  @NotNull
+
+
+  public String getToken() {
+    return token;
+  }
+
+  public void setToken(String token) {
+    this.token = token;
+  }  
 
 
   @Override
@@ -181,12 +216,14 @@ public class RegUser   {
         Objects.equals(this.telephone, regUser.telephone) &&
         Objects.equals(this.email, regUser.email) &&
         Objects.equals(this.date, regUser.date) &&
+        Objects.equals(this.password, regUser.password) &&
+        Objects.equals(this.token, regUser.token) &&
         Objects.equals(this.type, regUser.type);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, telephone, email, date, type);
+    return Objects.hash(id, name, telephone, email, date, type, token, password);
   }
 
   @Override
@@ -200,6 +237,8 @@ public class RegUser   {
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    date: ").append(toIndentedString(date)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    sb.append("    password: ").append(toIndentedString(password)).append("\n");
+    sb.append("    token: ").append(toIndentedString(token)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -74,4 +74,5 @@ public class RegisterUserApiController implements RegisterUserApi {
         return new ResponseEntity<JsonApiBodyResponseSuccess>(HttpStatus.NOT_IMPLEMENTED);
     }
 
+
 }

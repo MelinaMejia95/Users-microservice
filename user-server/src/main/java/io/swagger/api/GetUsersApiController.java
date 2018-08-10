@@ -1,5 +1,6 @@
 package io.swagger.api;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
 
